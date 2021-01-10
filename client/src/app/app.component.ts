@@ -19,7 +19,7 @@ export class AppComponent implements OnInit{
       this.getUsers();
   }
 
-  getUsers(){
+  getUsers(): void{
     this.http.get('https://localhost:5001/api/users').subscribe(response => {
       this.users = response;
     },error => {
